@@ -3,7 +3,7 @@ from sys import argv
 from typing import List, Union, Any, Sequence
 
 
-def get_value_from_csv(filename: str, row_index: int, column_index: int) -> Union[str, None]:
+def main(filename: str, row_index: int, column_index: int) -> Union[str, None]:
     try:
         with open(filename, mode='r', newline='') as file:
             data_reader = csv.reader(file)
@@ -27,6 +27,6 @@ if __name__ == "__main__":
     row_index = int(argv[2])
     column_index = int(argv[3])
     
-    result = get_value_from_csv(filename, row_index, column_index)
+    result = main(filename, row_index, column_index)
     if result is not None:
         print(result)
