@@ -1,7 +1,7 @@
 import csv
 import math
 
-def calculate_entropy(csv_content: str) -> float:
+def task(csv_content: str) -> float:
     rows = csv.reader(csv_content.splitlines(), delimiter=',')
     dataset = list(rows)
     total_count = len(dataset)
@@ -21,5 +21,5 @@ def calculate_entropy(csv_content: str) -> float:
 
 if __name__ == '__main__':
     csv_input = '2,0,2,0,0\n0,1,0,0,1\n2,1,0,0,1\n0,1,0,1,1\n0,1,0,1,1\n'
-    calculated_entropy = calculate_entropy(csv_input)
+    calculated_entropy = task(csv_input)
     print(calculated_entropy)
